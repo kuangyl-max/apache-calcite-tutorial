@@ -33,7 +33,7 @@ public class TutorialSqlValidator extends SqlValidatorImpl {
         SqlStdOperatorTable sqlStdOperatorTable = SqlStdOperatorTable.instance();
         // 注册ramp函数
         sqlStdOperatorTable.register(new DedupFunction());
-        return new TutorialSqlValidator(sqlStdOperatorTable,catalogReader, new JavaTypeFactoryImpl(), SqlValidator.Config.DEFAULT);
+        return new TutorialSqlValidator(sqlStdOperatorTable,catalogReader, new JavaTypeFactoryImpl(),Config.DEFAULT);
     }
 
     public static SqlValidatorImpl createMockSqlValidator(SqlParser.Config parserConfig){

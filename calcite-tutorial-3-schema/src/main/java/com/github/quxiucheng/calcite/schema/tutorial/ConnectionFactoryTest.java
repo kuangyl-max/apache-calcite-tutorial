@@ -16,6 +16,11 @@ public class ConnectionFactoryTest {
         String model = "calcite-tutorial-3-schema/src/main/resources/model.json";
         info.put("model", model);
         DriverManager.getConnection("jdbc:calcite:", info);
+        /**
+         * 1.从model.yaml读取factory 为TutorialSchemaFactory，
+         * 2.执行TutorialSchemaFactory.create创建表TutorialTable
+         *
+         */
     }
 
     public void createTableFactoryConnection() throws SQLException {
@@ -24,10 +29,17 @@ public class ConnectionFactoryTest {
         String model = "calcite-tutorial-3-schema/src/main/resources/model.yaml";
         info.put("model", model);
         DriverManager.getConnection("jdbc:calcite:", info);
+        /**
+         * 1.从model.yaml读取factory 为TutorialTableFactory，
+         * 2.执行TutorialTableFactory.create创建表TutorialTable
+         *
+         */
+
     }
 
     public static void main(String[] args) throws SQLException {
-        new ConnectionFactoryTest().createTableFactoryConnection();
+        new ConnectionFactoryTest().createSchemaFactoryConnection();
+//        new ConnectionFactoryTest().createTableFactoryConnection();
 
     }
 }

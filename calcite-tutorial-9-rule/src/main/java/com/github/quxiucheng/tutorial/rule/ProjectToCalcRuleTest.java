@@ -25,5 +25,8 @@ public class ProjectToCalcRuleTest {
     优化后:
     LogicalCalc(expr#0..4=[{inputs}], proj#0..4=[{exprs}])
       EnumerableTableScan(table=[[hr, emps]])
+
+     SELECT *
+     FROM `hr`.`emps`
      */
 }

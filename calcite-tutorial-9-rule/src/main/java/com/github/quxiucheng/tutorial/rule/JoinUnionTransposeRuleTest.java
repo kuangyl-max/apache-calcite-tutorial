@@ -41,5 +41,15 @@ public class JoinUnionTransposeRuleTest {
           LogicalProject(empid=[$0], deptno=[$1], name=[$2], salary=[$3], commission=[$4])
             EnumerableTableScan(table=[[hr, emps]])
           EnumerableTableScan(table=[[hr, emps]])
+     SELECT *
+     FROM (SELECT *
+     FROM (SELECT *
+     FROM `hr`.`emps`) AS `t`,
+     `hr`.`emps` AS `emps0`
+     UNION ALL
+     SELECT *
+     FROM (SELECT *
+     FROM `hr`.`emps`) AS `t0`,
+     `hr`.`emps` AS `emps2`) AS `t1`
      */
 }

@@ -40,5 +40,8 @@ public class AggregateReduceFunctionsRuleTest {
        LogicalAggregate(group=[{0}], agg#0=[$SUM0($1)], agg#1=[COUNT()])
         LogicalProject(name=[$1], deptno=[$0])
          EnumerableTableScan(table=[[hr, depts]])
+     SELECT CAST(COALESCE(SUM(`deptno`), 0) / COUNT(*) AS SIGNED)
+     FROM `hr`.`depts`
+     GROUP BY `name`
      */
 }

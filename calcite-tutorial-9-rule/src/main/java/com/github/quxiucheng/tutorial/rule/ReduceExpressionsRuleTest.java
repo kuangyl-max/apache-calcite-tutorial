@@ -36,5 +36,9 @@ public class ReduceExpressionsRuleTest {
     优化后:
     LogicalProject(empid=[$0], deptno=[$1], name=[$2], salary=[$3], commission=[$4])
       LogicalValues(tuples=[[]])
+
+     SELECT *
+     FROM (SELECT NULL AS `empid`, NULL AS `deptno`, NULL AS `name`, NULL AS `salary`, NULL AS `commission`) AS `t`
+     WHERE 1 = 0
      */
 }

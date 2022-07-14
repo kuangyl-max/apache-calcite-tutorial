@@ -15,12 +15,18 @@
         <dependency>
             <groupId>org.apache.calcite</groupId>
             <artifactId>calcite-core</artifactId>
+            <version>1.26.0</version>
         </dependency>
         <dependency>
-            <groupId>com.github.quxiucheng</groupId>
-            <artifactId>calcite-tutorial-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
         </dependency>
+        <!--        <dependency>-->
+<!--            <groupId>com.github.quxiucheng</groupId>-->
+<!--            <artifactId>calcite-tutorial-common</artifactId>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>

@@ -35,6 +35,11 @@ public class FilterJoinRuleTest {
         LogicalFilter(condition=[=($2, '1')])
           EnumerableTableScan(table=[[hr, emps]])
         EnumerableTableScan(table=[[hr, depts]])
+     SELECT `t`.`name` AS `ename`, `depts`.`name` AS `dname`
+     FROM (SELECT *
+     FROM `hr`.`emps`
+     WHERE `name` = '1') AS `t`
+     INNER JOIN `hr`.`depts` ON `t`.`deptno` = `depts`.`deptno`
      */
 
 }

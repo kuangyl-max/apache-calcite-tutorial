@@ -28,5 +28,9 @@ public class SortRemoveConstantKeysRuleTest {
     LogicalProject(name=[$2])
       LogicalFilter(condition=[=($2, 'abc')])
         EnumerableTableScan(table=[[hr, emps]])
+
+     SELECT `name`
+     FROM `hr`.`emps`
+     WHERE `name` = 'abc'
      */
 }

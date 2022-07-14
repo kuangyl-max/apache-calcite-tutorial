@@ -3,7 +3,7 @@ package com.github.quxiucheng.tutorial.rule;
 import org.apache.calcite.rel.rules.CoreRules;
 import org.apache.calcite.rel.rules.FilterCorrelateRule;
 import org.apache.calcite.rel.rules.JoinToCorrelateRule;
-
+import com.github.quxiucheng.tutorial.rule.RuleTester;
 /**
  * @author quxiucheng
  * @date 2019-02-02 10:54:00

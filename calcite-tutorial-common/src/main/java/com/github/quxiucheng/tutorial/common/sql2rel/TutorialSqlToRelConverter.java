@@ -39,7 +39,6 @@ public class TutorialSqlToRelConverter {
         RelOptCluster cluster = RelOptCluster.create(planner, rexBuilder);
         CalciteCatalogReader catalogReader = TutorialCalciteCatalogReader.createMockCatalogReader(parserConfig);
         SqlValidatorImpl validator = TutorialSqlValidator.createMockSqlValidator(parserConfig);
-
         return new SqlToRelConverter(
                 plannerImpl,
                 validator,

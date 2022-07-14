@@ -36,5 +36,8 @@ public class JoinCommuteRuleTest {
         LogicalJoin(condition=[=($4, $0)], joinType=[left])
           EnumerableTableScan(table=[[hr, depts]])
           EnumerableTableScan(table=[[hr, emps]])
+     SELECT `emps`.`name`
+     FROM `hr`.`depts`
+     LEFT JOIN `hr`.`emps` ON `depts`.`deptno` = `emps`.`deptno`
      */
 }

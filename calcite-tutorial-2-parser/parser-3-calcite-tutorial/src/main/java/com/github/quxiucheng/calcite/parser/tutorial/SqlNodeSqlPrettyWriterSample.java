@@ -23,12 +23,12 @@ public class SqlNodeSqlPrettyWriterSample {
         SqlPrettyWriter prettyWriter = new SqlPrettyWriter(MysqlSqlDialect.DEFAULT);
         // Sql语句
         String sql = "select * from emps where id = 1";
-        SqlParser.Config mysqlConfig = SqlParser.configBuilder().setLex(Lex.MYSQL).build();
+        SqlParser.Config mysqlConfig = SqlParser.configBuilder().setLex(Lex.MYSQL).build();//lex 命名，内置的词汇政策。词汇策略描述了如何引用标识符，是否在阅读时将其转换为上案例或下案例，以及它们是否与案例敏感性匹配。
 
         SqlParser parser = SqlParser.create("", mysqlConfig);
         // 解析sql
-        SqlNode sqlNode = parser.parseQuery(sql);
-        String format = prettyWriter.format(sqlNode);
+        SqlNode sqlNode = parser.parseQuery(sql); //把sql拆分为select,groupby等
+        String format = prettyWriter.format(sqlNode);//Pretty printer for SQL statements.
         // 还原某个方言的SQL
         System.out.println(format);
     }

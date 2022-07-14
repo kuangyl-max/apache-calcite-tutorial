@@ -30,5 +30,10 @@ public class FilterToCalcRuleTest {
     LogicalProject(empid=[$0], deptno=[$1], name=[$2], salary=[$3], commission=[$4])
       LogicalCalc(expr#0..4=[{inputs}], expr#5=['abcd'], expr#6=[=($t2, $t5)], proj#0..4=[{exprs}], $condition=[$t6])
         EnumerableTableScan(table=[[hr, emps]])
+
+     SELECT *
+     FROM `hr`.`emps`
+     WHERE `name` = 'abcd'
+     ???
      */
 }

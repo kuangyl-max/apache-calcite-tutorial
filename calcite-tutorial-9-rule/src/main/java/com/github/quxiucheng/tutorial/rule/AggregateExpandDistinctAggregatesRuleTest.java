@@ -2,7 +2,6 @@ package com.github.quxiucheng.tutorial.rule;
 
 import org.apache.calcite.rel.rules.AggregateExpandDistinctAggregatesRule;
 import org.apache.calcite.rel.rules.CoreRules;
-
 /**
  *
  * 展开 distinct

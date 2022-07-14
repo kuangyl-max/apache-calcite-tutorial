@@ -33,5 +33,11 @@ public class JoinToCorrelateRuleTest {
         EnumerableTableScan(table=[[hr, emps]])
         LogicalFilter(condition=[=($cor0.deptno, $0)])
           EnumerableTableScan(table=[[hr, depts]])
+
+     SELECT `$cor0`.`name` AS `ename`, `$cor0`.`name0` AS `dname`
+     FROM `hr`.`emps` AS `$cor0`,
+     LATERAL (SELECT *
+     FROM `hr`.`depts`
+     WHERE `$cor0`.`deptno` = `deptno`) AS `t`
      */
 }

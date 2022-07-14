@@ -30,5 +30,10 @@ public class JoinExtractFilterRuleTest {
         LogicalJoin(condition=[true], joinType=[inner])
           EnumerableTableScan(table=[[hr, emps]])
           EnumerableTableScan(table=[[hr, depts]])
+
+     SELECT `emps`.`name`
+     FROM `hr`.`emps`,
+     `hr`.`depts`
+     WHERE `emps`.`deptno` = `depts`.`deptno`
      */
 }

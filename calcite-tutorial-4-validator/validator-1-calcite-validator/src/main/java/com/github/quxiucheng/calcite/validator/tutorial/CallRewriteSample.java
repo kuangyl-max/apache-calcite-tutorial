@@ -56,7 +56,7 @@ public class CallRewriteSample {
         SqlStdOperatorTable instance = SqlStdOperatorTable.instance();
         instance.register(new SqlNullifFunction());
         SqlValidator validator = SqlValidatorUtil.newValidator(instance,
-                calciteCatalogReader, factory, SqlConformanceEnum.DEFAULT
+                calciteCatalogReader, factory,SqlConformanceEnum.DEFAULT
         );
         // 校验后的SqlNode
         // SqlCoalesceFunction

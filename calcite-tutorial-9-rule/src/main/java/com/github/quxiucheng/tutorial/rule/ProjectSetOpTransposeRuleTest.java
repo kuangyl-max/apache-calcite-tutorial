@@ -38,6 +38,10 @@ public class ProjectSetOpTransposeRuleTest {
       LogicalProject(salary=[$3])
         LogicalProject(empid=[$0], deptno=[$1], name=[$2], salary=[$3], commission=[$4])
           EnumerableTableScan(table=[[hr, emps]])
-
+     SELECT `salary`
+     FROM `hr`.`emps`
+     UNION ALL
+     SELECT `salary`
+     FROM `hr`.`emps`
      */
 }

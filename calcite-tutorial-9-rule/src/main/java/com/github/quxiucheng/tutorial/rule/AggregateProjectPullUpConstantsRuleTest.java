@@ -36,5 +36,10 @@ public class AggregateProjectPullUpConstantsRuleTest {
         LogicalProject(deptno=[$1], salary=[$3])
          LogicalFilter(condition=[=(CAST($1):INTEGER NOT NULL, 10)])
           EnumerableTableScan(table=[[hr, emps]])
+
+     SELECT COUNT(*) AS `c`
+     FROM `hr`.`emps`
+     WHERE `deptno` = 10
+     GROUP BY `salary`
      */
 }
